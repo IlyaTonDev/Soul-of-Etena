@@ -1,18 +1,8 @@
-const referralButton = document.querySelector('.referral-button');
-const referralPopup = document.querySelector('.referral-popup');
-const inviteButton = document.querySelector('.invite-button');
+const coin = document.getElementById('coin');
+const soulsCount = document.getElementById('souls-count');
+let count = 0;
 
-referralButton.addEventListener('click', () => {
-  referralPopup.classList.add('show');
-});
-
-inviteButton.addEventListener('click', () => {
-  // Откройте ссылку приглашения в новом окне
-  window.open('https://example.com/referral-link', '_blank');
-});
-
-document.addEventListener('click', (e) => {
-  if (e.target !== referralPopup && e.target !== referralButton) {
-    referralPopup.classList.remove('show');
-  }
+coin.addEventListener('click', () => {
+  count++;
+  soulsCount.textContent = count;
 });
