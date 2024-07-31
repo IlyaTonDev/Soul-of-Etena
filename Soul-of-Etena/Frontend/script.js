@@ -7,13 +7,12 @@ referralButton.addEventListener('click', () => {
 });
 
 inviteButton.addEventListener('click', () => {
-    // Откройте ссылку приглашения в новом окне
-    window.open('https://example.com/referral-link', '_blank');
-  });
+  // Откройте ссылку приглашения в новом окне
+  window.open('https://example.com/referral-link', '_blank');
+});
 
 document.addEventListener('click', (e) => {
   if (e.target !== referralPopup && e.target !== referralButton) {
     referralPopup.classList.remove('show');
   }
-
 });
